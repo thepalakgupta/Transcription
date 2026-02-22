@@ -1,0 +1,6 @@
+[server]
+# Allow uploading files up to 500 MB
+maxUploadSize = 500
+
+[theme]
+base = "light"

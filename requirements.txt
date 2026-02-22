@@ -1,0 +1,13 @@
+# Speech-to-Text Transcriber dependencies
+#
+# Works for both local install and Streamlit Cloud deployment.
+# Uses the CPU-only PyTorch build (smaller, no CUDA needed, fixes WinError 126 on Windows).
+#
+# Install locally:
+#   pip install -r requirements.txt
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+streamlit>=1.32.0
+openai-whisper>=20231117
+yt-dlp>=2024.1.0
