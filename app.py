@@ -44,17 +44,19 @@ with st.sidebar:
     st.divider()
 
     MODEL_OPTIONS = {
-        "tiny   (~75 MB · fastest · lower accuracy)": "tiny",
-        "base   (~150 MB · fast · good for English)": "base",
-        "small  (~490 MB · balanced)":                "small",
-        "medium (~1.5 GB · high accuracy)":           "medium",
-        "large  (~3 GB · best accuracy · slowest)":   "large",
+        "tiny          (~75 MB  · fastest)":                    "tiny",
+        "base          (~150 MB · fast, good for English)":     "base",
+        "small         (~490 MB · balanced)":                   "small",
+        "medium        (~1.5 GB · high accuracy)":              "medium",
+        "large-v2      (~3 GB   · very high accuracy)":         "large-v2",
+        "large-v3      (~3 GB   · best accuracy)":              "large-v3",
+        "large-v3-turbo (~800 MB · fast + near-large accuracy ★)": "large-v3-turbo",
     }
     model_label = st.selectbox(
         "Whisper model",
         list(MODEL_OPTIONS.keys()),
         index=1,
-        help="The model is downloaded once and cached locally.",
+        help="Models are downloaded once and cached locally. large-v3-turbo offers the best speed/accuracy balance.",
     )
     model_size = MODEL_OPTIONS[model_label]
 
